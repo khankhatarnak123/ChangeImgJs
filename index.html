@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Image</title>
+</head>
+<style>
+    #image{
+        border-radius: 50px;
+        height: 400px;
+        width: 600px;
+    }
+
+    button{
+        border-radius: 50px;
+        border-style: none;
+        height: 30px;
+        width: 80px;
+        background-color: rgb(198, 85, 44);
+        color: aliceblue;
+ 
+        
+    }
+</style>
+<body>
+    <br /><br />
+    <img id="image" src="./Images/christmas-globe.webp" />
+
+    <button onclick="changeImage()">Click me</button>
+  <script>
+
+    let image = document.querySelector('#image');
+    let arr = ['./Images/angel.jpg','./Images/christmas-gift.jpg','./Images/christmas-globe.webp','./Images/race-car.webp','./Images/hay-bales.jpg','./Images/berry.jpg']
+    
+    function changeImage() {
+        let index = Math.floor(Math.random()*6)
+        // for (let i = 1;i<2;i++)
+        image.src = arr[index]
+    }
+
+
+
+  </script>
+</body>
+</html>
